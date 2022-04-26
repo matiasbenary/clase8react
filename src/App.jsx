@@ -1,43 +1,34 @@
-import { useState } from 'react'
-import logo from './logo.svg'
+
 import './App.css'
+import Card from './Components/Card'
+import Counter from './Components/Counter'
 
 function App () {
-  const [count, setCount] = useState(0)
-
+  const edad = 27
+  const nombre = 'matias'
+  const esMayor180 = true
+  const lugar = { nombre: 'Plaza', direccion: '9 de julio' }
+  const lugares = [
+    { nombre: 'Plaza 1', direccion: '9 de julio' },
+    { nombre: 'Plaza 2', direccion: '10 de julio' },
+    { nombre: 'Plaza 3', direccion: '11 de julio' },
+    { nombre: 'Plaza 4', direccion: '12 de julio' },
+    { nombre: 'Plaza 5', direccion: '13 de julio' },
+    { nombre: 'Plaza 6', direccion: '14 de julio' },
+    { nombre: 'Plaza 7', direccion: '15 de julio' }
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <Card
+      anio={edad}
+      nombre={nombre}
+      titulo="Festejo"
+      esMayor180={esMayor180}
+      esMayorEdad
+      data={lugar}
+      info={lugares}
+      />
+      <Counter></Counter>
     </div>
   )
 }
