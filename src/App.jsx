@@ -2,6 +2,7 @@
 import './App.css'
 import Card from './Components/Card'
 import Counter from './Components/Counter'
+import Form from './Components/Form'
 
 function App () {
   const edad = 27
@@ -19,6 +20,7 @@ function App () {
   ]
   return (
     <div className="App">
+      <Form></Form>
       <Card
       anio={edad}
       nombre={nombre}
